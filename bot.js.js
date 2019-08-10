@@ -1,13 +1,13 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "!"
+var adminprefix = '!'
 
 
 
 
 
-  var prefix = "$";
+  var prefix = "!";
 
   client.on("message", message => {
   
@@ -25,7 +25,7 @@ var adminprefix = '$'
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("$avatar")) {
+if (message.content.startsWith("!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -45,13 +45,13 @@ client.on('ready',  () => {
   
   
   client.on("message", message => {
-    if (message.content === "$help") {
+    if (message.content === "!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       !bc  |  لأرسال برود كاست للأونلاين
 
        ** `)
    message.author.sendEmbed(embed)
